@@ -1,3 +1,5 @@
+#testando se está sincronizadoooooooo
+
 my_packages <- (c(
   "gapminder", "ggforce", "gh", "globals", "openintro", "profvis", 
   "RSQLite", "shiny", "shinycssloaders", "shinyFeedback", 
