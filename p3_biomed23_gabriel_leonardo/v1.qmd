@@ -1,0 +1,90 @@
+---
+title: "P3_GabrielG_Leonardo"
+format: html
+editor: visual
+---
+
+
+```{r include = FALSE}
+library(readxl)
+library(reactable)
+library(dplyr)
+library(gtsummary)
+library(gt)
+```
+
+```{r include = FALSE}
+
+dados <- read_xlsx('x_dist_6min.xlsx')
+
+```
+
+#Exercício 1
+
+Construa tabelas unidimensionais completas de frequências absolutas (n) e relativas (%) dos indivíduos avaliados: a. por sexo b. por hipertensão c. prática de exercícios físicos
+
+Descreva os resultados.
+
+```{r include = FALSE}
+ 
+colnames(dados)[3] <- 'Sexo'
+colnames(dados)[6] <- 'Hipertensão'
+colnames(dados)[8] <- 'Prática'
+dados
+
+df1 <- dados%>%
+  mutate(Sexo = recode(Sexo, 'M' = 'Masculino', 'F' = 'Feminino'))%>%
+  mutate(Hipertensão = recode(Hipertensão, 'N' = 'Não', 'S' = 'Sim'))%>%
+  mutate(Prática = recode(Prática, 'N' = 'Não', 'S' = 'Sim', 'NR' = 'Não Respondeu'))
+
+  
+```
+
+Por sexo:
+
+```{r echo = FALSE, message = FALSE}
+df1%>%
+  select(Sexo)%>%
+  tbl_summary()%>%
+  modify_header(label~'Variável')%>%
+  modify_caption('**Tabela de frequências - sexo**')%>%
+  bold_labels()
+```
+
+Por hipertensão:
+
+```{r echo = FALSE, message = FALSE}
+df1%>%
+  select(Hipertensão)%>%
+  tbl_summary()%>%
+  modify_header(label~'Variável')%>%
+  modify_caption('**Tabela de frequências - Hipertensão**')%>%
+  bold_labels()
+```
+
+Por prática de exercícios físicos:
+
+```{r echo = FALSE, message = FALSE}
+df1%>%
+  select(Prática)%>%
+  tbl_summary()%>%
+  modify_header(label~'Variável')%>%
+  modify_caption('**Tabela de frequências - Prática de Exercícios Físicos**')%>%
+  bold_labels()
+```
+
+```{r}
+library(ggplot2)
+dados%>%
+  ggplot(aes(x = 'Diferença', y = Dif_PSIS))+
+  geom_boxplot()
+```
+
+Ex2
+
+```{r}
+df1%>%
+  select(Sexo, Idade)%>%
+  gt
+```
+

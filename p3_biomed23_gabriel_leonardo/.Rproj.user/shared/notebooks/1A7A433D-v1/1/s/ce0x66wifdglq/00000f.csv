@@ -1,0 +1,6 @@
+"0","df1%>%"
+"0","  select(Sexo)%>%"
+"0","  tbl_summary()%>%"
+"0","  modify_header(label~'Variável')%>%"
+"0","  modify_caption('**Tabela de frequências - sexo**')%>%"
+"0","  bold_labels()"

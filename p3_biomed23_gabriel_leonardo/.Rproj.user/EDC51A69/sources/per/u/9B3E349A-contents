@@ -1,0 +1,8 @@
+library(readxl)
+
+dados%>%
+  select(Sexo)%>%
+  tbl_summary()%>%
+  modify_header(label~'Variável')%>%
+  modify_caption('**Tabela de frequências - sexo**')%>%
+  bold_labels()

@@ -1,0 +1,26 @@
+{
+    "id": "A22F55DD",
+    "path": "~/p3_biomed23_gabriel_leonardo/app1/app.R",
+    "project_path": "app1/app.R",
+    "type": "r_source",
+    "hash": "881157729",
+    "contents": "",
+    "dirty": false,
+    "created": 1693435805347.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "19,25",
+        "scrollLine": "1"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1693675999,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1693675999227,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -1,0 +1,7 @@
+"0",""
+"0","df1 <- dados%>%"
+"0","  mutate(Sexo = recode(Sexo, 'M' = 'Masculino', 'F' = 'Feminino'))%>%"
+"0","  mutate(Hipertensão = recode(Hipertensão, 'N' = 'Não', 'S' = 'Sim'))%>%"
+"0","  mutate(Prática = recode(Prática, 'N' = 'Não', 'S' = 'Sim', 'NR' = 'Não Respondeu'))"
+"0",""
+"0","  "

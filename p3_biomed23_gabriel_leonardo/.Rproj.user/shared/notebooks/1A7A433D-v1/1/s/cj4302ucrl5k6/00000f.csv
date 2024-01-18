@@ -1,0 +1,5 @@
+"0"," "
+"0","colnames(dados)[3] <- 'Sexo'"
+"0","colnames(dados)[6] <- 'Hipertensão'"
+"0","colnames(dados)[8] <- 'Prática'"
+"0","dados"
